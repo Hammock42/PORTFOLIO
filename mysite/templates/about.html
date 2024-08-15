@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<!-- About Section -->
+<div class="container-fluid m-0 p-0">
+  <img src="{% static 'img/about_bg_md.png' %}" alt="Medium Screen About section Background" class="img-fluid d-lg-none">
+  <img src="{% static 'img/about_bg.png' %}" alt="Large Screen About section Background" class="img-fluid d-none d-lg-block">
+</div>
+<!-- End About Section -->
+{% endblock content %}

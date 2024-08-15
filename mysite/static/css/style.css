@@ -1,0 +1,360 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+  background: #040b14;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: #F2F2F2;
+  text-align: center;
+  line-height: 1.3em;
+  margin: 0 auto;
+  text-shadow: -.01em .01em 0 #666,
+         -.02em .02em 0 #666,
+         -.03em .03em 0 #666,
+         -.04em .04em 0 #666,
+         -.05em .05em 0 #666,
+         -.06em .06em 0 #999,
+         -.07em .07em 0 #999,
+         -.08em .08em 0 #999,
+         -.09em .09em 0 #999,
+         -.1em .1em 0 #999,
+         -.11em .11em 0 #999;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+#my_logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/binary.jpg") top center;
+  background-size: cover;
+}
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #0d6efd;
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+}
+  
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+  
+/*--------------------------------------------------------------
+# Interests Section
+--------------------------------------------------------------*/
+#inter_test {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/ham_9000_empty.png") top center;
+  background-size: cover;
+}
+
+
+/* PULSE BORDER */
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.interests ul li {
+  padding: 20px 0;
+}
+
+.interests .img-box {
+  position: relative;
+}
+
+.interests .img-box a span i {
+  font-size: 6rem;
+  color: #05edfc;
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 0.55rem solid #05edfc;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+}
+.border-animation--border-1 {
+  animation-delay: 1s;
+}
+.border-animation--border-2 {
+  animation-delay: 1.5s;
+}
+  
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+#skills-container {
+  /* The image used */
+  background-image: url("../img/space_bg.jpg");
+  /* Full height */
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.skills-icons {
+  height: 40px;
+  width: 40px;
+}
+
+.soft-skills-list span {
+  font-size: calc(1.5rem * var(--tag-multiplier));
+}
+
+  
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+
+  
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  height: 150px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: #149ddd;
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  background: rgba(20, 157, 221, 0.75);
+  transition: 0.3s;
+  width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  background: rgba(20, 157, 221, 0.95);
+}
+.portfolio .portfolio-wrap .portfolio-links a + a {
+  border-left: 1px solid #37b3ed;
+}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: 0;
+}
+
+.portfolio img {
+  border-radius: 15px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+
+
+.button-contact {
+  width: 15em;
+  height: 5.5em;
+  background-color: #999;
+  background-image: linear-gradient(180deg, #CCC, #999);
+  border-top: 3px solid #CCC;
+  border-right: 3px solid #CCC;
+  border-left: 4px solid #666;
+  border-bottom: 4px solid #666;
+  border-radius: 1em;
+  float: left;
+  margin: 3em;
+  text-decoration: none;
+  box-shadow:  -.1em .1em 0 #000,
+         -.2em .2em 0 #000,
+         -.3em .3em 0 #000,
+         -.4em .4em 0 #333,
+         -.5em .5em 0 #333,
+         -.6em .6em 0 #333,
+         -.7em .7em 0 #333,
+         -.9em .9em 0 #333,
+         -1em 1em 0 #333,
+         -1.1em 1.1em 0 #333,
+         -1.2em 1.2em 0 #333;
+  transition: box-shadow 0.3s,
+        border-top 0.3s,
+        border-right 0.3s;
+}
+
+.button-contact:hover, .button-contact:focus {
+  box-shadow: .1em -.1em 0 #333,
+        .2em -.2em 0 #333,
+        -.1em .1em 0 #333,
+        -.2em .2em 0 #333,
+        -.3em .3em 0 #333,
+        inset -.1em -.1em 2em #FFF,
+        -.1em -.1em 2em #666;
+  border-top: 3px solid #666;
+  border-right: 3px solid #666;
+}
+
+.button-contact-inside {
+  width: 13em;
+  height: 4em;
+  margin: .5em auto;
+  border-radius: .8em;
+  background-color: #CCC;
+  background-image: linear-gradient(45deg, #CCC, #999);
+  box-shadow: inset -.15em .15em 0 #666,
+        inset .1em -.1em 0 #CCC;
+}
+
+
+/*--------------------------------------------------------------
+# Coming Soon Page
+--------------------------------------------------------------*/
+#coming_soon {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/coming_soon_bg.png") top center;
+  background-size: cover;
+}

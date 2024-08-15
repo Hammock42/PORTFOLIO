@@ -1,0 +1,191 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+
+<section id="portfolio" class="text-light portfolio">
+    <div class="container bg-secondary rounded">
+        <div class="row p-5">
+            <div class="section-title">
+                <h2>Portfolio</h2>
+                <p>Projects I have completed (or soon to be completed).</p>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">App</li>
+                    <li data-filter=".filter-game">Game</li>
+                    <li data-filter=".filter-web">Web</li>
+                    <li data-filter=".filter-school">School</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/clinton_county.jpg' %}" class="img-fluid" alt="Clinton County Website">
+                    <div class="portfolio-info">
+                        <h3>Clinton County</h3>
+                        <p>Website for Clinton County</p>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Hammock42/CLINTON_COUNTY" title="Examine the Code" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="https://hmhbp3.pythonanywhere.com/" title="Go to the Website" target="_blank" ><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-school">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/gan.jpg' %}" class="img-fluid" alt="GAN School project">
+                    <div class="portfolio-info">
+                        <h3>GAN School Project</h3>
+                        <p>Generative Adversarial Networks (GANs) for the MNIST dataset</p>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Hammock42/GANS_FOR_MNIST_DATASET" title="Examine the Code" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Link coming soon" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/eubit.jpg' %}" class="img-fluid" alt="Eubit Website">
+                    <div class="portfolio-info">
+                        <h3>Eubit </h3>
+                        <p>Website for an Imaginary Cryptocurrency.</p>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/eubit42/eubit42.github.io" title="Examine the Code" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="https://eubit42.github.io/" title="Check out the Website" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/super_mario_bros.jpg' %}" class="img-fluid" alt="Super Mario Bros Game">
+                    <div class="portfolio-info">
+                        <h3>Super Mario Bros</h3>
+                        <p>Classic Super Mario Bros game built with Pygame.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the Game (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-school">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/domain_nn.jpg' %}" class="img-fluid" alt="App 1">
+                    <div class="portfolio-info">
+                        <h3>Domain Neural Network</h3>
+                        <p>Domain Adversarial Training of Neural Networks for School Project.</p>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Hammock42/DOMAIN_ADVERSARIAL_TRAINING_OF_NEURAL_NETWORKS" title="Examine the Code" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the Project (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/chef_gpt.jpg' %}" class="img-fluid" alt="ChefGPT app">
+                    <div class="portfolio-info">
+                        <h3>ChefGPT</h3>
+                        <p>Mobile application that gives recipes and info for images of food.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the app (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-school">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/tandem_ants.jpg' %}" class="img-fluid" alt="App 1">
+                    <div class="portfolio-info">
+                        <h3>Collective Behavior in Tandem Ant Colony</h3>
+                        <p>School Project using BioInspired Algorithms to model the collective behavior of ant colonies.</p>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Hammock42/MODELING_COLLECTIVE_BEHAVIOR_IN_ANTS" title="Examine the Code" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the project (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/neofuel.jpg' %}" class="img-fluid" alt="Game 1">
+                    <div class="portfolio-info">
+                        <h3>NeoFuel</h3>
+                        <p>Ecommerce website for sellling sports supplements and supplies.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the Website (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/chess_ai.jpg' %}" class="img-fluid" alt="App 1">
+                    <div class="portfolio-info">
+                        <h3>ChessAI</h3>
+                        <p>Attempt of creating an AI powered chess engine.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the game (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/calorie_tracker.jpg' %}" class="img-fluid" alt="Game 1">
+                    <div class="portfolio-info">
+                        <h3>Calorie Tracker</h3>
+                        <p>Mobile application to help track calories.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the app (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/mortal_kombat.jpg' %}" class="img-fluid" alt="App 1">
+                    <div class="portfolio-info">
+                        <h3>Mortal Kombat</h3>
+                        <p>Classic Mortal Kombat game written in Pygame.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the game (coming soon)" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <img src="{% static 'img/portfolio/autoaide_screen.jpg' %}" class="img-fluid" alt="Game 1">
+                    <div class="portfolio-info">
+                        <h3>AutoAide</h3>
+                        <p>Mobile application to help with auto reminders.</p>
+                        <div class="portfolio-links">
+                            <a href="{% url 'coming_soon' %}" title="Examine the Code (coming soon)" target="_blank"><i class="fa-brands fa-github fa-bounce"></i></a>
+                            <a href="{% url 'coming_soon' %}" title="Check out the app (coming soon)" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->
+ 
+{% endblock content %}

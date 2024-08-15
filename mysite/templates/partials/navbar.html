@@ -1,0 +1,56 @@
+{% load static %}
+
+{% block navigation %}
+<!-- NavBar -->
+<nav class="navbar navbar-dark bg-transparent fixed-top">
+    <div class="container-fluid mx-5 px-5">
+        <a id="my_logo" class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'img/logo.png' %}" alt="My logo" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="text-light fs-3">
+                <i class="fa-solid fa-compass fa-beat me-2" style="--fa-beat-scale: 1.5;"></i>
+                Explore
+            </span>
+        </button>
+
+        <!-- Offcanvas Navigation -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <img class="offcanvas-title" id="offcanvasDarkNavbarLabel" src="{% static 'img/logo.png' %}" alt="My logo" height="60">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-3">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/interests/' %}active{% endif %}" href="{% url 'interests' %}">Interests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/skills/' %}active{% endif %}" href="{% url 'skills' %}">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/resume/' %}active{% endif %}" href="{% url 'resume' %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/portfolio/' %}active{% endif %}" href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/testimonials/' %}active{% endif %}" href="{% url 'testimonials' %}">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Offcanvas Navigation -->
+    </div>
+</nav>
+<!-- End NavBar -->
+{% endblock navigation %}

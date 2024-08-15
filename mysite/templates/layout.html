@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load django_bootstrap5 %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Hamad Hamdi | {% block title %}{% endblock %}
+    </title>
+    <meta name="description" content="Hamad Hamdi Portfolio Website">
+    <meta name="author" content="Hamad Hamdi">
+    <meta name="keywords" content="Hamad Hamdi, Portfolio, Software Developer, Machine Learning Engineer, Full Stack Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hamad Hamdi | Portfolio">
+    <meta property="og:description" content="Hamad Hamdi Portfolio Website">
+    <meta property="og:image" content="{% static 'img/favicon.png' %}">
+    <meta property="og:url" content="https://hamadhamdi.com">
+    <meta property="og:site_name" content="Hamad Hamdi">
+    <meta property="og:locale" content="en_US">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/regular.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Navigation -->
+        {% include "partials/navbar.html" %}
+
+        <!-- Main Content -->
+        {% block content %}
+        {% endblock %}
+
+    </div>
+    
+    <!-- JS Files -->
+    <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script> 
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/typed/typed.min.js' %}"></script>
+
+    <!-- Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
