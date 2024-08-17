@@ -29,8 +29,6 @@ def contact(request):
 def success(request):
     return HttpResponse('Success! Thank you for your message.')
 
-def interests(request):
-    return render(request, 'interests.html')
 
 def portfolio(request):
     return render(request, 'portfolio.html')
