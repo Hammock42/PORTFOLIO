@@ -5,8 +5,18 @@
 
 {% block content %}
 <!-- About Section -->
-<div class="container-fluid m-0 p-0">
-  <img src="{% static 'img/about_bg_md.png' %}" alt="Medium Screen About section Background" class="img-fluid d-lg-none">
+<div class="container-fluid text-light">
+  <div class="container d-md-none mt-5">
+    <img src="{% static 'img/about_bg_sm.png' %}" alt="small Screen About Section Background" class="img-fluid p-5">
+    <span class="fs-4 text-center">
+      I&apos;m a recent Master's graduate in Computer Science with a passion for developing innovative software solutions. My expertise 
+      covers data science, machine learning, and full&dash;stack development. I have a strong foundation in Python, Jave, and C&plus;&plus;. 
+      During my academic journey, I worked on many projects that sharpened my problem solving skills and ability to translate complex 
+      concepts into practical solutions. I am excited to leverage my knowledge and continue growing as a software developer in a dynamic 
+      and collaborative environment.
+    </span>
+  </div>
+  <img src="{% static 'img/about_bg_md.png' %}" alt="Medium Screen About section Background" class="img-fluid d-none d-md-block d-lg-none">
   <img src="{% static 'img/about_bg.png' %}" alt="Large Screen About section Background" class="img-fluid d-none d-lg-block">
 </div>
 <!-- End About Section -->

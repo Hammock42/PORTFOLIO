@@ -43,7 +43,7 @@ h1 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/binary.jpg") top center;
+  background: url("../img/binary_1_25.jpg") top center;
   background-size: cover;
 }
 #hero:before {
@@ -178,7 +178,11 @@ section {
 }
 
 .soft-skills-list span {
-  font-size: calc(1.5rem * var(--tag-multiplier));
+  font-size: calc(0.8rem * var(--tag-multiplier) + 1.1vw);
+}
+
+#skills-languages span {
+  font-size: calc(0.8rem + 1.1vw);
 }
 
   
@@ -346,6 +350,10 @@ section {
   background-image: linear-gradient(45deg, #CCC, #999);
   box-shadow: inset -.15em .15em 0 #666,
         inset .1em -.1em 0 #CCC;
+}
+
+.btn-responsive {
+  font-size: calc(0.7rem + 1.1vw);
 }
 
 
